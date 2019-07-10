@@ -18,6 +18,7 @@ public class MQTTController {
     PublishMessage publishMessage;
     @RequestMapping("/send")
     public void send(String msg) throws MqttException {
+        //传入推送到的主题以及内容
         publishMessage.start("topic01", msg);
     }
 }
